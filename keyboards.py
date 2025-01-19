@@ -19,10 +19,9 @@ def buy_menu(amount, price):
 
 # Меню выбора способа оплаты
 payment_menu = InlineKeyboardMarkup(inline_keyboard=[
-    [InlineKeyboardButton(text="СБП", callback_data="pay_sbp")],
     [InlineKeyboardButton(text="CryptoBot", callback_data="pay_crypto")],
-    [InlineKeyboardButton(text="Tonkeeper", callback_data="pay_tonkeeper")],
-    [InlineKeyboardButton(text="Выйти", callback_data="exit_to_menu")],
+    [InlineKeyboardButton(text="Другие методы (в разработке)", callback_data="pay_other_disabled")],
+    [InlineKeyboardButton(text="Назад", callback_data="back_to_menu")],
 ])
 
 # Кнопка закрытия заказа для администратора

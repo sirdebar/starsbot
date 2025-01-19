@@ -15,17 +15,13 @@ async def set_commands(bot: Bot):
 
 async def main():
     try:
-        # Инициализация бота с указанием HTML как формат разметки
         bot = Bot(token=BOT_TOKEN)
         dp = Dispatcher()
         
-        # Настройка обработчиков
         setup_handlers(dp)
         
-        # Установка команд
         await set_commands(bot)
         
-        # Запуск опроса
         await dp.start_polling(bot, allowed_updates=["message", "callback_query"])
     except Exception as e:
         print(f"Ошибка: {e}")
